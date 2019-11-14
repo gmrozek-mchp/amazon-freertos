@@ -99,6 +99,7 @@ void prvLabelToFilenameHandle( uint8_t * pcLabel,
         {
             *pcFileName = pkcs11palFILE_CODE_SIGN_PUBLIC_KEY;
             *pHandle = eInvalidHandle; /* OTA & Code Signing Keys are not supported on this platform. */
+            configPRINTF(("Got here 1\r\n"));
         }
         else
         {
@@ -201,6 +202,8 @@ CK_OBJECT_HANDLE PKCS11_PAL_FindObject( uint8_t * pLabel,
 
     /* Translate from the PKCS#11 label to local storage file name. */
     prvLabelToFilenameHandle( pLabel, &pcFileName, &xHandle );
+
+    configPRINTF(("PAL_FindObject: Label: %s, Handle: %d\r\n", pLabel, xHandle));
 
     return xHandle;
 }
