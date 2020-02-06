@@ -30,7 +30,7 @@
 
 /* Shadow demo configuration. The demo publishes periodic Shadow updates and responds
  * to changing Shadows. */
-#define AWS_IOT_DEMO_SHADOW_UPDATE_COUNT        ( 1 )   /* Number of updates to publish. */
+#define AWS_IOT_DEMO_SHADOW_UPDATE_COUNT        ( 20 )   /* Number of updates to publish. */
 #define AWS_IOT_DEMO_SHADOW_UPDATE_PERIOD_MS    ( 3000 ) /* Period of Shadow updates. */
 
 /* Library logging configuration. IOT_LOG_LEVEL_GLOBAL provides a global log
@@ -46,7 +46,6 @@
 #define AWS_IOT_LOG_LEVEL_SHADOW                IOT_LOG_INFO
 #define AWS_IOT_LOG_LEVEL_DEFENDER              IOT_LOG_INFO
 #define IOT_LOG_LEVEL_HTTPS                     IOT_LOG_INFO
-
 /* Platform thread priority. */
 #define IOT_THREAD_DEFAULT_PRIORITY      5
 

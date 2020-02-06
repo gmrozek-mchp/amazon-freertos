@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS V1.1.4
+ * Amazon FreeRTOS V1.4.8
  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -87,7 +87,7 @@
  */
 /** @{ */
 #define mqttconfigMQTT_TASK_STACK_DEPTH    ( 2048 )
-#define mqttconfigMQTT_TASK_PRIORITY       ( tskIDLE_PRIORITY )
+#define mqttconfigMQTT_TASK_PRIORITY       ( tskIDLE_PRIORITY + 0 )
 /** @} */
 
 /**
@@ -98,7 +98,7 @@
 /**
  * @brief Maximum number of parallel operations per client.
  */
-#define mqttconfigMAX_PARALLEL_OPS       ( 5 )
+#define mqttconfigMAX_PARALLEL_OPS       (5)
 
 /**
  * @brief Time in milliseconds after which the TCP send operation should timeout.
