@@ -57,12 +57,12 @@ void MPU_Initialize(void)
 
     /* Region 0 Name: ITCM, Base Address: 0x0, Size: 4MB  */
     MPU->RBAR = MPU_REGION(0, 0x0);
-    MPU->RASR = MPU_REGION_SIZE(21) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL \
+    MPU->RASR = MPU_REGION_SIZE(21) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL_WT \
                 | MPU_ATTR_ENABLE  ;
 
     /* Region 1 Name: DTCM, Base Address: 0x20000000, Size: 4MB  */
     MPU->RBAR = MPU_REGION(1, 0x20000000);
-    MPU->RASR = MPU_REGION_SIZE(21) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL \
+    MPU->RASR = MPU_REGION_SIZE(21) | MPU_RASR_AP(MPU_RASR_AP_READWRITE_Val) | MPU_ATTR_NORMAL_WT \
                 | MPU_ATTR_ENABLE  ;
 
     /* Region 2 Name: SRAM, Base Address: 0x20400000, Size: 8MB  */
